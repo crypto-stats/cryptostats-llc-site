@@ -1,10 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import HeroCard from './HeroCard'
 import Text from 'components/Text'
-import RowSection from 'components/RowSection'
-import ColumnSection from 'components/ColumnSection'
 import Button from 'components/Button'
+import styled from 'styled-components'
 
 const formatNum = (num: number) =>
   num.toLocaleString('en-US', {
@@ -12,91 +10,76 @@ const formatNum = (num: number) =>
     currency: 'USD',
   })
 
-const Hero: React.FC<{ sampleData: any }> = ({ sampleData }) => {
+const HeroHolder = styled.div`
+height: 100%;
+display: -webkit-box;     
+display: -moz-box;         
+display: -ms-flexbox;      
+display: -webkit-flex;     
+display: flex;  
+flex-direction:column;
+-webkit-justify-content:center;
+margin:0 auto 100px auto;
+padding:0 0 100px 0;
+min-width: 320px;
+max-width: 800px;
+
+@media ( min-width: 1024px ) {
+  -webkit-justify-content: end;
+  justify-content:flex-end;
+
+
+ 
+`
+
+const HomeBackgroundHead = styled.div`
+  height: 754px;
+
+  margin: 0 auto 3rem auto;
+  width: calc(var(--container-full) - var(--spaces-4));
+  @media (min-width: 768px) {
+    max-width: calc(var(--bp-small) - var(--spaces-4));
+  }
+
+  @media (min-width: 1024px) {
+    width: calc(var(var(--bp-medium)) - var(--spaces-9));
+
+    background-image: url('faded-bg.svg');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin-bottom: 200px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: calc(var(--bp-medium) - var(--spaces-4));
+  } ;
+`
+
+const Hero: React.FC<{ sampleData: any }> = () => {
   return (
-    <RowSection mt="140">
-      <ColumnSection columns="6">
-        <Text tag="h1" type="display" mb="40">
-          One neutral source of truth for crypto metrics. Used by everyone, managed by the
-          community.
+    <HomeBackgroundHead>
+      <HeroHolder>
+        {/* <HeroHolder> */}
+        <Text tag="h1" type="display" mb="40" align="center">
+          Get your product in front of crypto's most dedicated users
         </Text>
-        <Link href="/discover" passHref>
-          <Button variant="primary" size="large">
-            Discover the data collection
+
+        <Text mb="40" align="center" color="gray">
+          With over 1m unique visitors a year, where 61% navigate directly to our sites from their
+          own bookmarks, we have some of the most dedicated users in Crypto ready to try your
+          product.
+        </Text>
+
+        <Link href="/apply" passHref>
+          <Button variant="primary" size="large" width="hero">
+            <Text tag="p" align="center">
+              Apply to become a sponsor
+            </Text>
           </Button>
         </Link>
-      </ColumnSection>
-
-      <ColumnSection from="8" to="13" hideSmall>
-        <HeroCard
-          title="Gitcoin DAO Treasury"
-          subtitle="Preview"
-          position="TopRight"
-          icon="gitcoin"
-        >
-          <Text tag="p" type="label" mt="16" mb="8">
-            Adapter Name
-          </Text>
-          <Text tag="p" type="content">
-            Gitcoin
-          </Text>
-          <Text tag="p" type="label" mt="16" mb="8">
-            Data type
-          </Text>
-          <Text tag="p" type="content">
-            Treasury
-          </Text>
-          <Text tag="p" type="label" mt="16" mb="8">
-            Data
-          </Text>
-          <Text tag="p" type="content">
-            24 hours fees: {formatNum(sampleData.gitcoinTreasury)}
-          </Text>
-        </HeroCard>
-
-        <HeroCard title="Yearn Vault APYs" subtitle="Preview" position="Center" icon="yearn">
-          <Text tag="p" type="label" mt="16" mb="8">
-            Adapter Name
-          </Text>
-          <Text tag="p" type="content">
-            Uniswap
-          </Text>
-          <Text tag="p" type="label" mt="16" mb="8">
-            Data type
-          </Text>
-          <Text tag="p" type="content">
-            Fees
-          </Text>
-          <Text tag="p" type="label" mt="16" mb="8">
-            Data
-          </Text>
-          <Text tag="p" type="content">
-            24 hours fees: {formatNum(sampleData.yearnApy)}
-          </Text>
-        </HeroCard>
-
-        <HeroCard title="Arbitrum fees" subtitle="Preview" position="BottomLeft" icon="arbitrum">
-          <Text tag="p" type="label" mt="16" mb="8">
-            Adapter Name
-          </Text>
-          <Text tag="p" type="content">
-            Arbitrum
-          </Text>
-          <Text tag="p" type="label" mt="16" mb="8">
-            Data type
-          </Text>
-          <Text tag="p" type="content">
-            Fees
-          </Text>
-          <Text tag="p" type="label" mt="16" mb="8">
-            Data
-          </Text>
-          <Text tag="p" type="content">
-            24 hours fees: {formatNum(sampleData.arbitrumFees)}
-          </Text>
-        </HeroCard>
-      </ColumnSection>
-    </RowSection>
+      </HeroHolder>
+    </HomeBackgroundHead>
   )
 }
 

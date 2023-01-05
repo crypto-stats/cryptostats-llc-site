@@ -8,7 +8,9 @@ const TagElement = styled.div<{
   color?: string
   align?: string
   weight?: string
+  italic?: boolean
 }>`
+
   font-family: 'Inter';
   margin: 0;
   padding: 0;
@@ -127,6 +129,11 @@ const TagElement = styled.div<{
     word-break: break-all;
   `}
 
+  ${({italic}) => italic === true && `
+  font-style: italic;
+` }
+ 
+
   font-weight: ${({ weight }) => (weight ? weight : '')};
 
   ${({ color }) => color && `color: var(--color-${color});`}
@@ -142,6 +149,7 @@ interface TextProps {
   weight?: string
   align?: string
   href?: string
+  italic?: boolean
 }
 
 const Text: React.FC<TextProps> = ({
@@ -155,6 +163,7 @@ const Text: React.FC<TextProps> = ({
   weight,
   align,
   href,
+  italic
 }) => {
   return (
     <TagElement
@@ -167,6 +176,7 @@ const Text: React.FC<TextProps> = ({
       align={align}
       weight={weight}
       href={href}
+      italic={italic}
     >
       {children}
     </TagElement>

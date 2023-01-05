@@ -12,6 +12,7 @@ const ColumnContainer = styled.div<{
   position: relative;
   grid-column: col-start / span 12;
 
+
   ${({ hideSmall }) => hideSmall && `display: none;`}
 
   @media ( min-width: 1024px ) {

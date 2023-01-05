@@ -46,7 +46,8 @@ const loadingMixin = css`
 const ButtonElement = styled.button<ButtonElementProps>`
   font-family: 'Inter';
   display: flex;
-  width: ${({ fullWidth }) => (fullWidth ? '100%' : 'auto')};
+  margin:0 auto;
+  width: ${({ width }) => (width !== 'hero' ? '45%' : '25%')};
   min-width: ${({ width }) => (width === 'auto' ? `auto` : `160px`)};
   border: none;
   border-radius: 4px;

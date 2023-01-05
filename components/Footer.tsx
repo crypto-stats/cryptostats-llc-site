@@ -11,7 +11,7 @@ const FooterContainer = styled(RowSection)`
 `
 
 const Logo = styled.div<{ dark?: boolean }>`
-  background-image: url(${({ dark }) => (dark ? '/logo-all-white.svg' : '/logo-all-black.svg')});
+  background-image: url(${({ dark }) => (dark ? '/logo-all-white.svg' : '/llc-logo.svg')});
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -24,12 +24,14 @@ const NavContainer = styled.div`
   @media (min-width: 1024px) {
     display: flex;
     justify-content: flex-end;
+    
   }
 `
 
 const Nav = styled.nav`
   display: flex;
   flex-direction: column;
+  align-items:start;
 
   & + & {
     margin-top: var(--spaces-4);
@@ -47,6 +49,7 @@ const NavLink = styled.a`
   line-height: 40px;
   color: var(--color-normal-text);
   font-size: 18px;
+  font-weight:500;
   text-decoration: none;
 
   &:hover {
@@ -68,38 +71,15 @@ const Footer = ({ dark }: { dark?: boolean }) => {
       <ColumnSection columns="7">
         <NavContainer>
           <Nav>
-            <Text tag="p" type="label" mb="16">
-              &nbsp;
-            </Text>
             <Link href="/subgraph-editor" passHref>
-              <NavLink>Subgraph Editor</NavLink>
-            </Link>
-            <Link href="/blog" passHref>
-              <NavLink>Blog</NavLink>
+              <NavLink>Contributers</NavLink>
             </Link>
           </Nav>
+
           <Nav>
-            <Text tag="p" type="label" mb="16">
-              Data Metrics
-            </Text>
-            <Link href="/discover" passHref>
-              <NavLink>Data Collections</NavLink>
-            </Link>
-            <NavLink href="https://docs.cryptostats.community/" target="_blank">
-              Docs
-            </NavLink>
-            <NavLink href="https://forum.cryptostats.community/" target="_blank">
-              Forum
-            </NavLink>
-          </Nav>
-          <Nav>
-            <Text tag="p" type="label" mb="16">
-              Social
-            </Text>
             <NavLink href="https://twitter.com/CryptoStats_" target="_blank">
-              Twitter
+              Become a sponsor
             </NavLink>
-            <NavLink href="/discord">Discord</NavLink>
           </Nav>
         </NavContainer>
       </ColumnSection>
