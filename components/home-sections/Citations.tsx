@@ -24,10 +24,10 @@ const Block = styled(Text)`
 
 const Articles = styled.div`
   box-sizing: border-box;
-  width: 300px;
-  height: 300px;
-  max-width:300px;
-  max-height: 300px;
+  width: 275px;
+  height: 275px;
+  max-width:275px;
+  max-height: 275px;
   border: 1px solid var(--color-primary-800);
   transition: var(--transition-fast);
   margin-bottom: 2rem;

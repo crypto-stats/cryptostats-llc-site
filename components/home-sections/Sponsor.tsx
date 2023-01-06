@@ -4,7 +4,6 @@ import Link from 'next/link'
 import RowSection from 'components/RowSection'
 import ColumnSection from 'components/ColumnSection'
 import Text from 'components/Text'
-import Button from 'components/Button'
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
 import js from 'react-syntax-highlighter/dist/cjs/languages/hljs/javascript'
 // @ts-ignore
@@ -17,7 +16,7 @@ width:100%;
 height: auto;
 `
 
-const Actions: React.FC = () => {
+const Sponsor: React.FC = () => {
 
   return (
     <>
@@ -50,4 +49,4 @@ const Actions: React.FC = () => {
   )
 }
 
-export default Actions
+export default Sponsor

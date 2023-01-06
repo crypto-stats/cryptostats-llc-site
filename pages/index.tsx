@@ -4,7 +4,7 @@ import Footer from 'components/Footer'
 import Header from 'components/Header'
 import Citations from 'components/home-sections/Citations'
 import Hero from 'components/home-sections/Hero'
-import Actions from 'components/home-sections/Actions'
+import Sponsor from 'components/home-sections/Sponsor'
 import { NextPage } from 'next'
 import Users from 'components/home-sections/Users'
 import RowSection from 'components/RowSection'
@@ -41,7 +41,7 @@ const Home: NextPage<HomePageProps> = ({ sampleData }) => {
       <Hero sampleData={sampleData} />
       <About />
       <Citations />
-      <Actions />
+      <Sponsor />
 
       <Users />
       <Footer />

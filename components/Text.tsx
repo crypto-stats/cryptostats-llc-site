@@ -9,6 +9,7 @@ const TagElement = styled.div<{
   align?: string
   weight?: string
   italic?: boolean
+  mobile?:boolean
 }>`
 
   font-family: 'Inter';
@@ -20,6 +21,13 @@ const TagElement = styled.div<{
   text-decoration: none;
 
   ${({ align }) => align && `text-align: ${align};`}
+
+  ${({mobile}) => mobile && `
+  @media (max-width: 420px) {
+    text-align: justify;
+  }
+  text-align:center`
+  }
 
   ${({ type }) =>
     type === 'display' &&
@@ -150,6 +158,7 @@ interface TextProps {
   align?: string
   href?: string
   italic?: boolean
+  mobile?:boolean
 }
 
 const Text: React.FC<TextProps> = ({
@@ -163,7 +172,8 @@ const Text: React.FC<TextProps> = ({
   weight,
   align,
   href,
-  italic
+  italic,
+  mobile
 }) => {
   return (
     <TagElement
@@ -177,6 +187,7 @@ const Text: React.FC<TextProps> = ({
       weight={weight}
       href={href}
       italic={italic}
+      mobile={mobile}
     >
       {children}
     </TagElement>

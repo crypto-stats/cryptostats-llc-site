@@ -20,8 +20,6 @@ display: flex;
 flex-direction:column;
 -webkit-justify-content:center;
 margin:0 auto 100px auto;
-padding:0 0 100px 0;
-min-width: 320px;
 max-width: 800px;
 
 @media ( min-width: 1024px ) {
@@ -36,13 +34,13 @@ const HomeBackgroundHead = styled.div`
   height: 754px;
 
   margin: 0 auto 3rem auto;
-  width: calc(var(--container-full) - var(--spaces-4));
+  width: calc(var(--container-full) - var(--spaces-9));
   @media (min-width: 768px) {
     max-width: calc(var(--bp-small) - var(--spaces-4));
   }
 
   @media (min-width: 1024px) {
-    width: calc(var(var(--bp-medium)) - var(--spaces-9));
+    width: calc(var(var(--bp-medium)) - var(--spaces-4));
 
     background-image: url('faded-bg.svg');
     background-size: cover;
@@ -65,7 +63,7 @@ const Hero: React.FC<{ sampleData: any }> = () => {
           Get your product in front of crypto's most dedicated users
         </Text>
 
-        <Text mb="40" align="center" color="gray">
+        <Text mb="40" align="center" mobile color="gray">
           With over 1m unique visitors a year, where 61% navigate directly to our sites from their
           own bookmarks, we have some of the most dedicated users in Crypto ready to try your
           product.

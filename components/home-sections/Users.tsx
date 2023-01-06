@@ -37,7 +37,7 @@ const Users: React.FC = () => {
           <Text tag="h3" type="title_highlight" mb="40" align="center">
           Who can apply (our philosophy)
           </Text>
-          <Text tag="p" type="content_big" mb="16" align='center'>
+          <Text tag="p" type="content_big" mb="40" mobile>
           CryptoStats aims to be a neutral source of truth for crypto metrics, that is our aim above all else. To ensure that is always the case, we are using the following principles to determine what funding sources we are willing to accept and not:
           </Text>
         </ColumnSection>
@@ -65,7 +65,7 @@ const Users: React.FC = () => {
           <Text tag="h3" type="title_highlight" mb="40" mt='100' align="center">
           Apply to become a sponsor
           </Text>
-          <Text tag="p" type="content_big" mb="32" align='center'>
+          <Text tag="p" type="content_big" mb="32" mobile>
           Are you ready to start driving leads to your site? Fill in your details below and we’ll get back to you within 24 hours. If you have any questions, feel free to hit kalle@cryptostats.llc directly.</Text>
           <Button variant="primary" size="large">
             Apply to become a sponsor

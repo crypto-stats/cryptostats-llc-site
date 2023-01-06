@@ -12,7 +12,7 @@ const HeroWrapper = styled.div`
   text-align: center;
 
   @media (min-width: 768px) {
-    max-width: 70%;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
