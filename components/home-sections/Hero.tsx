@@ -4,11 +4,6 @@ import Text from 'components/Text'
 import Button from 'components/Button'
 import styled from 'styled-components'
 
-const formatNum = (num: number) =>
-  num.toLocaleString('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  })
 
 const HeroHolder = styled.div`
 height: 100%;

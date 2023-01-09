@@ -1,34 +1,15 @@
-import Button from 'components/Button'
 import ColumnSection from 'components/ColumnSection'
 import RowSection from 'components/RowSection'
 import Text from 'components/Text'
-import Link from 'next/link'
 import styled from 'styled-components'
 
-const Container = styled.section`
-  margin: 40px;
-  padding: 40px;
-`
 
 const Graphic = styled.img`
   max-width: 100%;
   height: auto;
 `
 
-const Split = styled.div`
-  display: flex;
-  & > a {
-    margin: 4px;
-  }
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-
-  & .desktop-only {
-    display: none;
-  }
-`
 
 export default function About() {
   return (

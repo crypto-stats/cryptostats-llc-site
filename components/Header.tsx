@@ -1,11 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { setRPC, useENSName } from 'use-ens-name'
 import styled from 'styled-components'
-import { useWeb3React } from '@web3-react/core'
-
-setRPC('https://rpc.flashbots.net/')
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -191,8 +187,6 @@ const Hamburger = styled.button<{ open: boolean }>`
 
 const Header = ({ dark }: { dark?: boolean }) => {
   const router = useRouter()
-  const { account } = useWeb3React()
-  const name = useENSName(account)
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
