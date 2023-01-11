@@ -1,13 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { setRPC, useENSName } from 'use-ens-name'
 import styled from 'styled-components'
-import { useWeb3React } from '@web3-react/core'
-import ConnectionButton from './ConnectionButton'
-import Button from 'components/Button'
-
-setRPC('https://rpc.flashbots.net/')
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -36,7 +30,7 @@ const HeaderMobileWrapper = styled.div`
 
 const Logo = styled.a<{ dark?: boolean }>`
   display: block;
-  background-image: url(${({ dark }) => (dark ? 'logo-dark.svg' : '/logo.svg')});
+  background-image: url(${({ dark }) => (dark ? '/llc-logo.svg' : '/llc-logo.svg')});
   color: transparent;
   background-repeat: no-repeat;
   background-position: center;
@@ -132,19 +126,6 @@ const NavLink = styled.a<{ active?: boolean }>`
   `}
 `
 
-const WalletButton = styled(ConnectionButton)`
-  border-radius: 4px;
-  border: solid 1px #d6eaff;
-  height: 35px;
-  background: transparent;
-  color: var(--color-normal-text);
-  padding: 0 20px;
-  align-self: center;
-
-  &:hover {
-    background: #f8fcff;
-  }
-`
 
 const Hamburger = styled.button<{ open: boolean }>`
   position: relative;
@@ -206,8 +187,6 @@ const Hamburger = styled.button<{ open: boolean }>`
 
 const Header = ({ dark }: { dark?: boolean }) => {
   const router = useRouter()
-  const { account } = useWeb3React()
-  const name = useENSName(account)
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -227,31 +206,13 @@ const Header = ({ dark }: { dark?: boolean }) => {
       <Nav open={menuOpen}>
         <NavItem>
           <Link href="/discover" passHref>
-            <NavLink active={router.route.indexOf('/discover') === 0}>Discover</NavLink>
+            <NavLink active={router.route.indexOf('/contributers') === 0}>Contributers</NavLink>
           </Link>
         </NavItem>
         <NavItem>
           <Link href="/subgraph-editor" passHref>
-            <NavLink active={router.route.indexOf('/subgraph-editor') === 0}>
-              Subgraph Editor
-            </NavLink>
+            <NavLink active={router.route.indexOf('/') === 0}>Become a sponsor</NavLink>
           </Link>
-        </NavItem>
-        <NavItem>
-          <NavLink href="https://docs.cryptostats.community/">Docs</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="https://forum.cryptostats.community/">Forum</NavLink>
-        </NavItem>
-        <NavItem>
-          <Link href="/editor" passHref>
-            <Button rel="nofollow" variant="secondary">
-              Create Adapter
-            </Button>
-          </Link>
-        </NavItem>
-        <NavItem>
-          <WalletButton>{account ? name || account.substr(0, 10) : 'Connect Wallet'}</WalletButton>
         </NavItem>
       </Nav>
     </HeaderContainer>

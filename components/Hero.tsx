@@ -8,7 +8,7 @@ const HeroContainer = styled.section<{ align?: string }>`
 
 interface HeroProps {
   className?: string
-  align?: string | 'left'
+  align?: string | 'center'
 }
 
 const Hero: React.FC<HeroProps> = ({ children, className, align }) => {

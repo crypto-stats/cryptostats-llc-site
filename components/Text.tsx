@@ -8,7 +8,10 @@ const TagElement = styled.div<{
   color?: string
   align?: string
   weight?: string
+  italic?: boolean
+  mobile?:boolean
 }>`
+
   font-family: 'Inter';
   margin: 0;
   padding: 0;
@@ -18,6 +21,13 @@ const TagElement = styled.div<{
   text-decoration: none;
 
   ${({ align }) => align && `text-align: ${align};`}
+
+  ${({mobile}) => mobile && `
+  @media (max-width: 420px) {
+    text-align: justify;
+  }
+  text-align:center`
+  }
 
   ${({ type }) =>
     type === 'display' &&
@@ -127,6 +137,11 @@ const TagElement = styled.div<{
     word-break: break-all;
   `}
 
+  ${({italic}) => italic === true && `
+  font-style: italic;
+` }
+ 
+
   font-weight: ${({ weight }) => (weight ? weight : '')};
 
   ${({ color }) => color && `color: var(--color-${color});`}
@@ -142,6 +157,8 @@ interface TextProps {
   weight?: string
   align?: string
   href?: string
+  italic?: boolean
+  mobile?:boolean
 }
 
 const Text: React.FC<TextProps> = ({
@@ -155,6 +172,8 @@ const Text: React.FC<TextProps> = ({
   weight,
   align,
   href,
+  italic,
+  mobile
 }) => {
   return (
     <TagElement
@@ -167,6 +186,8 @@ const Text: React.FC<TextProps> = ({
       align={align}
       weight={weight}
       href={href}
+      italic={italic}
+      mobile={mobile}
     >
       {children}
     </TagElement>
