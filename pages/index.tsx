@@ -25,8 +25,8 @@ const Home: NextPage<HomePageProps> = ({ sampleData }) => {
           content="It's easy: just publish an adapter or use the Dataset created by the Community to create and view anything you want."
         />
       </Head>
-      <RowSection>
-        <ColumnSection>
+      <RowSection >
+        <ColumnSection >
           <Header />
         </ColumnSection>
       </RowSection>

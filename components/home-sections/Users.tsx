@@ -22,13 +22,6 @@ margin-bottom: 2rem;
 }
 `
 
-    {/* <UsedByGrid>
-            <img src="clients/bloomberg.png" alt="Bloomberg" style={{ height: '26px' }} />
-            <img src="clients/cryptofees.png" alt="CryptoFees" />
-            <img src="clients/cryptotester.png" alt="CryptoTesters" />
-            <img src="clients/openbb.svg" alt="OpenBB" style={{ height: '' }} />
-</UsedByGrid> */}
-
 const Users: React.FC = () => {
   return (
     <>
@@ -57,7 +50,7 @@ const Users: React.FC = () => {
         </ColumnSection>
         <ColumnSection from='5' to='9'>
         <Text tag="p" type="content_big" mt='20' align='center'>
-        All our sponsors can be found here,  and feedback can be made in our community forum. 
+        All our <a style={{color:"var(--color-primary)"}} href='https://airtable.com/shrsf9vaMIdvo13Hn/tblnghRdwzrKeZymN'>sponsors can be found here</a>,  and feedback can be made in our <a style={{color:"var(--color-primary)"}} href='https://airtable.com/shrsf9vaMIdvo13Hn/tblnghRdwzrKeZymN'>community forum.</a> 
         </Text>
         
         </ColumnSection>
@@ -66,7 +59,7 @@ const Users: React.FC = () => {
           Apply to become a sponsor
           </Text>
           <Text tag="p" type="content_big" mb="32" mobile>
-          Are you ready to start driving leads to your site? Fill in your details below and we’ll get back to you within 24 hours. If you have any questions, feel free to hit kalle@cryptostats.llc directly.</Text>
+          Are you ready to start driving leads to your site? Fill in your details below and we’ll get back to you within 24 hours. If you have any questions, feel free to hit <span style={{color:"var(--color-primary)"}}>kalle@cryptostats.llc</span> directly.</Text>
           <Button variant="primary" size="large">
             Apply to become a sponsor
           </Button>
