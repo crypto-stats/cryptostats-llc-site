@@ -205,12 +205,12 @@ const Header = ({ dark }: { dark?: boolean }) => {
 
       <Nav open={menuOpen}>
         <NavItem>
-          <Link href="/discover" passHref>
+          {/* <Link href="/discover" passHref>
             <NavLink active={router.route.indexOf('/contributers') === 0}>Contributers</NavLink>
-          </Link>
+          </Link> */}
         </NavItem>
         <NavItem>
-          <Link href="/subgraph-editor" passHref>
+        <Link href="https://twitter.com/CryptoStats_">
             <NavLink active={router.route.indexOf('/') === 0}>Become a sponsor</NavLink>
           </Link>
         </NavItem>
