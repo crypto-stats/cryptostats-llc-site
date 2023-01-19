@@ -81,7 +81,6 @@ const IconsGrid = styled.div`
 const Citations: React.FC = () => {
 
   return (
-   
     <RowSection alignItems="center" mb="100">
        <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@flickr" />
