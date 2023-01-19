@@ -14,7 +14,7 @@ display: -webkit-flex;
 display: flex;  
 flex-direction:column;
 -webkit-justify-content:center;
-margin:0 auto 100px auto;
+margin:-70px auto 0 auto;
 max-width: 800px;
 
 @media ( min-width: 1024px ) {
@@ -38,7 +38,7 @@ const HomeBackgroundHead = styled.div`
     width: calc(var(var(--bp-medium)) - var(--spaces-4));
 
     background-image: url('faded-bg.svg');
-    background-size: cover;
+    background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
     margin-bottom: 200px;

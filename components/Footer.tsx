@@ -71,15 +71,17 @@ const Footer = ({ dark }: { dark?: boolean }) => {
       <ColumnSection columns="7">
         <NavContainer>
           <Nav>
-            <Link href="/subgraph-editor" passHref>
+            {/* <Link href="/" passHref>
               <NavLink>Contributers</NavLink>
-            </Link>
+            </Link> */}
           </Nav>
 
           <Nav>
-            <NavLink href="https://twitter.com/CryptoStats_" target="_blank">
+          <Link href="https://twitter.com/CryptoStats_" passHref>
+            <NavLink >
               Become a sponsor
             </NavLink>
+            </Link>
           </Nav>
         </NavContainer>
       </ColumnSection>

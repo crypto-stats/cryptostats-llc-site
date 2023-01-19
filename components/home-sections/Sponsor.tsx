@@ -37,11 +37,11 @@ const Sponsor: React.FC = () => {
             <br />
             <br />
             Ads have a floor price and go to the highest bidder. When slots have been purchased,
-            they show up in our sponsorship calendar.
+            they show up in our <a style={{color:"var(--color-primary)"}} href='https://airtable.com/shrsf9vaMIdvo13Hn/tblnghRdwzrKeZymN'>sponsorship calendar.</a>
           </Text>
         </ColumnSection>
         <ColumnSection from="7" to="12">
-          <Graphic src="/image-collections.png" alt="Collections" />
+          <Graphic src="/sponsor.png" alt="Collections" />
         </ColumnSection>
       </RowSection>
     </>
