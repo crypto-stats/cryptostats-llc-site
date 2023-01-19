@@ -210,7 +210,7 @@ const Header = ({ dark }: { dark?: boolean }) => {
           </Link> */}
         </NavItem>
         <NavItem>
-        <Link href="https://twitter.com/CryptoStats_">
+        <Link href="https://twitter.com/CryptoStats_" passHref>
             <NavLink active={router.route.indexOf('/') === 0}>Become a sponsor</NavLink>
           </Link>
         </NavItem>
