@@ -20,7 +20,7 @@ const Sponsor: React.FC = () => {
   return (
     <>
       <RowSection mt="120">
-        <ColumnSection from="1" to="6">
+        <ColumnSection from="2" to="6">
           <Text tag="h3" type="title_highlight" mb="40" align="left">
             How to become a sponsor
           </Text>
