@@ -79,8 +79,15 @@ const IconsGrid = styled.div`
 //pull media queries and make responsive single column
 
 const Citations: React.FC = () => {
+
   return (
+   
     <RowSection alignItems="center" mb="100">
+       <meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@flickr" />
+<meta name="twitter:title" content="Small Island Developing States Photo Submission" />
+<meta name="twitter:description" content="View the album on Flickr." />
+<meta name="twitter:image" content="https://farm6.staticflickr.com/5510/14338202952_93595258ff_z.jpg" />
       <ColumnSection from="2" to="12">
         <Text tag="h3" type="title_highlight" mb="40" align="center">
           Regularly cited by thought leaders in the space
