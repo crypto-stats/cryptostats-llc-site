@@ -134,6 +134,8 @@ const Hamburger = styled.button<{ open: boolean }>`
   background: transparent;
   outline: none;
   cursor: pointer;
+  padding:0;
+
 
   @media (min-width: 1024px) {
     display: none;
@@ -149,6 +151,8 @@ const Hamburger = styled.button<{ open: boolean }>`
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+
+
   & span:nth-child(1) {
     top: 0px;
     left: 0px;
@@ -205,12 +209,12 @@ const Header = ({ dark }: { dark?: boolean }) => {
 
       <Nav open={menuOpen}>
         <NavItem>
-          <Link href="/discover" passHref>
+          {/* <Link href="/discover" passHref>
             <NavLink active={router.route.indexOf('/contributers') === 0}>Contributers</NavLink>
-          </Link>
+          </Link> */}
         </NavItem>
         <NavItem>
-          <Link href="/subgraph-editor" passHref>
+        <Link href="https://twitter.com/CryptoStats_" passHref>
             <NavLink active={router.route.indexOf('/') === 0}>Become a sponsor</NavLink>
           </Link>
         </NavItem>
